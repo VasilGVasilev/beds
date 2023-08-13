@@ -78,36 +78,32 @@ const Navbar = () => {
         // the Navbar is fixed, meaning when we start the page, it is hidden and scroll makes it appear
         // but also if we refresh down the Home page, due to Navbar also being fixed to viewport, it will appear since being fixed makes it also constanlty inView
 
-            <nav className={`bg-white z-40 w-full fixed top-0 py-[2%] sm:py-[1%]`} >
+            <nav className={`bg-black z-40 w-full fixed top-0 py-[2%] sm:py-[1%]`} >
                 <div className="flex items-center justify-between mx-auto w-5/6">
 
                     <Link className='saturate-200 duration-200 flex justify-center items-center h-[30%] w-[30%] sm:h-[15%] sm:w-[15%]' href={'/'}>
-                        <Image
+                        <img
+                            className="rounded-xl h-10 md:h-16"
                             loader={imageLoader}
-                            src="/ixora.webp"
+                            src="/dm-logo.png"
                             alt="Ixora Logo"
-                            width={979}
-                            height={350}
+
                         />
                     </Link>
                     {/* DESKTOP NAV */}
                     {isDesktop ? (
-                        <div className={`text-xl 2xl:text-2xl flex justify-between gap-10 2xl:gap-16 text-black font-bold`}>
+                        <div className={`text-xl 2xl:text-2xl flex justify-between gap-10 2xl:gap-16 text-white font-bold`}>
                             <LinkTemplate
                                 urlLink='/'
                                 page="Начало"
                             />
                             <LinkTemplate
-                                urlLink='/description/'
-                                page="За сградата"
+                                urlLink='/order/'
+                                page="Как да поръчам"
                             />
                             <LinkTemplate
-                                urlLink='/apartments/'
-                                page="Апартаменти"
-                            />
-                            <LinkTemplate
-                                urlLink='/investor/'
-                                page="Инвеститор"
+                                urlLink='/video/'
+                                page="Видео"
                             />
                             <LinkTemplate
                                 urlLink='/contacts/'
@@ -164,17 +160,8 @@ const Navbar = () => {
                                     variants={navbarVariant}
                                 >
                                     <LinkMobileTemplate
-                                        urlLink='/description'
-                                        page="За сградата"
-                                        setIsMenuToggled={setIsMenuToggled}
-                                    />
-                                </motion.div>
-                                <motion.div
-                                    variants={navbarVariant}
-                                >
-                                    <LinkMobileTemplate
-                                        urlLink='/apartments'
-                                        page="Апартаменти"
+                                        urlLink='/order'
+                                        page="Как да поръчам"
                                         setIsMenuToggled={setIsMenuToggled}
                                     />
                                 </motion.div>
@@ -183,8 +170,8 @@ const Navbar = () => {
                                 >
 
                                     <LinkMobileTemplate
-                                        urlLink='/investor'
-                                        page="Инвеститор"
+                                        urlLink='/video'
+                                        page="Видео"
                                         setIsMenuToggled={setIsMenuToggled}
                                     />
                                 </motion.div>

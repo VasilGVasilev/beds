@@ -2,15 +2,13 @@
 
 import Image from "next/image"
 import { imageLoader } from "../../utils/imgLoader";
-import Timeline from "@/components/Timeline";
-import ForBuilding from "@/components/ForBuidling";
 import Maps from "@/components/Location";
 import { motion } from "framer-motion";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
 const buildingProcessLayout ="pb-10 px-5 h-full w-full lg:h-96 flex justify-center"
-export default function Description() {
+export default function Order() {
 
     return (
         <>
@@ -25,7 +23,6 @@ export default function Description() {
                     <div className="text-white py-4 text-center text-3xl font-bold truncate">За сградата</div>
             </motion.div>
 
-            <ForBuilding></ForBuilding>
 
             {/* TIMELINE */}
             <motion.div
@@ -37,7 +34,6 @@ export default function Description() {
                     <div className="text-white text-center text-3xl font-bold">Етапи</div>
             </motion.div>
 
-            <Timeline></Timeline>
 
             {/* BUILDING PROGRESS */}
             <div>

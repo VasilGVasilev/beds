@@ -14,7 +14,7 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 
 
 
-export default function Investor() {
+export default function Video() {
 
 
 

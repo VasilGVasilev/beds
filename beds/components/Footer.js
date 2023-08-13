@@ -10,13 +10,13 @@ const Footer = ({toTopHandle}) => {
           <div className='md:flex md:justify-center'>
 
             <div className='md:text-center'>
-              <div className='text-orange-500 font-mono text-xl'>Ixora Luxury Residence</div>
-              <div className='p-3 text-white font-mono text-sm'> Ixora Luxury Residence е бутикова сграда със спа център и финтес, ситуирана в подножието на Витоша</div>
+              <div className='text-blue-600 font-mono text-xl'>DM - падащи легла</div>
+              <div className='p-3 text-white font-mono text-sm'>Ние предлагаме огромно разнообразие, като всеки дизайн е съобразен със специфичните преференции на клиента. Потърсете ни сега, за да реализираме Вашите идеи. </div>
             </div>
             <div className='md:text-center'>
-              <div className='text-orange-500 font-mono text-xl'>Контакти</div>
-              <div className='p-3'>
-                <div className="py-2 flex space-x-3 items-center">
+              <div className='text-blue-600 font-mono text-xl'>Контакти</div>
+              <div className='p-3 flex flex-col justify-center items-center'>
+                <div className="py-2 flex space-x-3 items-center justify-center">
                   <Image
                     src="/green-phone.svg"
                     alt="Phone Ring"
@@ -24,17 +24,17 @@ const Footer = ({toTopHandle}) => {
                     width={20}
                     height={8}
                   />
-                  <div className="text-sm text-white"><a href={`tel:00359886879993`}>00359886879993</a></div>
+                  <div className="text-sm text-green-600"><a href={`tel:00359888368256`}>0888368256</a></div>
                 </div>
-                <div className="py-2 flex space-x-2 items-center">
-                  <Image
-                    src="/email.svg"
-                    alt="Email"
+                <div className="py-2 flex space-x-2 items-center justify-center">
+                  <img
+                    src="/assets/fb.svg"
+                    alt="facebook"
                     className="bg-transparent animate-pulse"
-                    width={20}
-                    height={8}
+                    width={50}
+                    height={50}
                   />
-                  <div className="text-sm text-white"><a href="mailto:office@creativestudiobg.com">office@creativestudiobg.com</a></div>
+                  <div className="text-sm whitespace-nowrap text-blue-600"><a href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>Фейсбук страница</a></div>
                 </div>
               </div>
             </div>

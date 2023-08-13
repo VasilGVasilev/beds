@@ -4,12 +4,10 @@ import Image from "next/image"
 import { imageLoader } from "../utils/imgLoader"
 import LineGradient from "../components/LineGradient"
 import Maps from "@/components/Location"
-import Timeline from "@/components/Timeline"
-import ForBuilding from "@/components/ForBuidling"
 import { motion } from "framer-motion"
-import PromptToPlan from "@/components/PromptToPlan"
 import WelcomeText from "@/components/WelcomeText"
 import { playfair } from "@/utils/fonts"
+import Gallery from "@/components/Gallery"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 const container = {
@@ -29,21 +27,21 @@ const letterVariant = {
 export default function Home() {
     return (
         <div>
-            {/* WELCOME VIDEO */}
+            {/* WELCOME IMAGE */}
 
-            <div className="group relative">
+            <div className="group relative ">
 
                 <img
-                    className="mx-auto w-full bg-white opacity-5 group-hover:opacity-40 transition"
+                    className="mx-auto w-full h-1/2 bg-white opacity-20 group-hover:opacity-60 transition"
                     loader={imageLoader}
                     src="/fb-welcome.png"
                     alt="Image"
                 />
                 <Link href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>
 
-                    <div className="absolute bottom-1/4 left-0 w-full h-full flex items-end justify-center ">
+                    <div className="absolute bottom-[15%] sm:bottom-1/3 left-0 w-full h-full flex items-end justify-center ">
                         <motion.div 
-                            className={`font-extrabold welcomeTextOnImg text-blue-600 text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px] group-hover:animate-bounce `}
+                            className={`font-extrabold welcomeTextOnImg text-blue-600 text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px] animate-bounce `}
                             variants={container}
                             initial="hidden"
                             whileInView="visible"
@@ -83,8 +81,8 @@ export default function Home() {
             </div>
             <LineGradient></LineGradient>
 
-            {/* WELCOME TEXT AND IMG */}
-            <div className="lg:flex lg:justify-between lg:items-center lg:p-10 bg-orange-50">
+            {/* WELCOME TEXT AND FALLING LIKE A BED ANIMATION */}
+            <div className="lg:flex lg:justify-center lg:items-center lg:p-10 bg-orange-50">
                 {/* WELCOME TEXT */}
                 <div className="lg:basis-[30%]">
                     <div className={` p-10`}>
@@ -98,14 +96,14 @@ export default function Home() {
                                 hidden: { opacity: 0, x: -50 },
                                 visible: { opacity: 1, x: 0 },
                             }} 
-                            >Ixora Luxury Residence: </motion.div>
+                            ><img src="/assets/triangle.svg" alt="triangle" className="bg-inherit" /> </motion.div>
                         <WelcomeText></WelcomeText>
                     </div>
                 </div>
 
                 {/* WELCOME IMAGE */}
                 <motion.div 
-                    className="lg:basis-[70%] "
+                    className=""
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -115,41 +113,24 @@ export default function Home() {
                       visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <div className="p-5 md:p-10 relative before:absolute before:top-[3%] before:left-[1%]
-                    before:w-full before:h-full before:border-l-2 before:border-t-2 before:border-[#f83600] before:z-10">
-                        {/* Parallax effect on hover */}
-                        <div className="relative w-full h-fit overflow-hidden mx-auto z-20">
-                            <Link href={'/apartments'}>
-                                <Image
-                                    className="transition-transform duration-700 ease-in-out hover:scale-125 "
-                                    loader={imageLoader}
-                                    src="/ixora-welcome.webp"
-                                    width={5000}
-                                    height={2813}
-                                    alt="Image"
-                                />
-                            </Link>
-                        </div>
 
+                    <Link href={'/apartments'}>
+                        <img
+                            className="transition-transform duration-700 ease-in-out hover:scale-110"
+                            // loader={imageLoader}
+                            src="/assets/folding-bed.gif"
 
-                    </div>
+                            alt="Image"
+                        />
+                    </Link>
+
                 </motion.div>
             </div>
             <LineGradient></LineGradient>
 
 
-            {/* TIMELINE */}
-            <Timeline></Timeline>
-            <LineGradient></LineGradient>
-
-            
-            {/* DESCRIPTION */}
-            <ForBuilding></ForBuilding>
-            <LineGradient></LineGradient>
-
-            {/* PROMPT IMG TO PLAN */}
-            <Link href={'/apartments'} className={`flex justify-center items-center text-center py-5 lg:py-0 lg:pt-10 text-white text-lg sm:text-3xl hover:scale-110`}>Изберете Вашия луксозен нов дом сега.</Link>
-            <PromptToPlan></PromptToPlan>
+            {/* GALLERY */}
+            <Gallery></Gallery>
             <LineGradient></LineGradient>
 
             {/* LOCATION */}
