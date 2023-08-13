@@ -34,16 +34,16 @@ export default function Home() {
             <div className="group relative">
 
                 <img
-                    className="h-full bg-white opacity-25 group-hover:opacity-100 transition"
+                    className="mx-auto w-full bg-white opacity-5 group-hover:opacity-40 transition"
                     loader={imageLoader}
                     src="/fb-welcome.png"
                     alt="Image"
                 />
                 <Link href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>
 
-                    <div className="absolute bottom-[15%] left-0 w-full h-full flex items-end justify-center ">
+                    <div className="absolute bottom-1/4 left-0 w-full h-full flex items-end justify-center ">
                         <motion.div 
-                            className={`${playfair.className} welcomeTextOnImg text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px] group-hover:bg-blue-600 group-hover:animate-bounce`}
+                            className={`font-extrabold welcomeTextOnImg text-blue-600 text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px] group-hover:animate-bounce `}
                             variants={container}
                             initial="hidden"
                             whileInView="visible"
