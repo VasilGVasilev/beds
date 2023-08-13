@@ -31,45 +31,55 @@ export default function Home() {
         <div>
             {/* WELCOME VIDEO */}
 
-            <div className="relative">
-                <video className="w-full h-full" autoPlay={true} muted={true} loop={true} playsInline={true} >
-                    <source src="/video.MP4" type="video/MP4" />
-                    Your browser does not support the video tag.
-                </video>
+            <div className="group relative">
 
-                <div className="absolute bottom-[15%] left-0 w-full h-full flex items-end justify-center ">
-                    <motion.div 
-                        className={`${playfair.className} welcomeTextOnImg text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px]`}
-                        variants={container}
-                        initial="hidden"
-                        whileInView="visible"
-                        viewport={{ once: true, amount: 0.2 }}
-                    >
-                        <motion.span variants={letterVariant}>В</motion.span>
-                        <motion.span variants={letterVariant}>а</motion.span>
-                        <motion.span variants={letterVariant}>ш</motion.span>
-                        <motion.span variants={letterVariant}>и</motion.span>
-                        <motion.span variants={letterVariant}>я</motion.span>
-                        <motion.span variants={letterVariant}>т</motion.span>
-                        <motion.span variants={letterVariant}> </motion.span>
-                        <motion.span variants={letterVariant}>л</motion.span>
-                        <motion.span variants={letterVariant}>у</motion.span>
-                        <motion.span variants={letterVariant}>к</motion.span>
-                        <motion.span variants={letterVariant}>с</motion.span>
-                        <motion.span variants={letterVariant}>о</motion.span>
-                        <motion.span variants={letterVariant}>з</motion.span>
-                        <motion.span variants={letterVariant}>е</motion.span>
-                        <motion.span variants={letterVariant}>н</motion.span>
-                        <motion.span variants={letterVariant}> </motion.span>
-                        <motion.span variants={letterVariant}>н</motion.span>
-                        <motion.span variants={letterVariant}>о</motion.span>
-                        <motion.span variants={letterVariant}>в</motion.span>
-                        <motion.span variants={letterVariant}> </motion.span>
-                        <motion.span variants={letterVariant}>д</motion.span>
-                        <motion.span variants={letterVariant}>о</motion.span>
-                        <motion.span variants={letterVariant}>м</motion.span>
-                    </motion.div>
-                </div>
+                <img
+                    className="h-full bg-white opacity-25 group-hover:opacity-100 transition"
+                    loader={imageLoader}
+                    src="/fb-welcome.png"
+                    alt="Image"
+                />
+                <Link href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>
+
+                    <div className="absolute bottom-[15%] left-0 w-full h-full flex items-end justify-center ">
+                        <motion.div 
+                            className={`${playfair.className} welcomeTextOnImg text-white text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px] group-hover:bg-blue-600 group-hover:animate-bounce`}
+                            variants={container}
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.2 }}
+                        >
+                            <motion.span variants={letterVariant}>П</motion.span>
+                            <motion.span variants={letterVariant}>о</motion.span>
+                            <motion.span variants={letterVariant}>с</motion.span>
+                            <motion.span variants={letterVariant}>л</motion.span>
+                            <motion.span variants={letterVariant}>е</motion.span>
+                            <motion.span variants={letterVariant}>д</motion.span>
+                            <motion.span variants={letterVariant}>в</motion.span>
+                            <motion.span variants={letterVariant}>а</motion.span>
+                            <motion.span variants={letterVariant}>й</motion.span>
+                            <motion.span variants={letterVariant}>т</motion.span>
+                            <motion.span variants={letterVariant}>е</motion.span>
+                            <motion.span variants={letterVariant}> </motion.span>
+                            <motion.span variants={letterVariant}>н</motion.span>
+                            <motion.span variants={letterVariant}>и</motion.span>
+                            <motion.span variants={letterVariant}> </motion.span>
+                            <motion.span variants={letterVariant}>в</motion.span>
+                            <motion.span variants={letterVariant}>ъ</motion.span>
+                            <motion.span variants={letterVariant}>в</motion.span>
+                            <motion.span variants={letterVariant}> </motion.span>
+                            <motion.span variants={letterVariant}>ф</motion.span>
+                            <motion.span variants={letterVariant}>е</motion.span>
+                            <motion.span variants={letterVariant}>й</motion.span>
+                            <motion.span variants={letterVariant}>с</motion.span>
+                            <motion.span variants={letterVariant}>б</motion.span>
+                            <motion.span variants={letterVariant}>у</motion.span>
+                            <motion.span variants={letterVariant}>к</motion.span>
+
+                        </motion.div>
+                    </div>
+                </Link>
+
             </div>
             <LineGradient></LineGradient>
 

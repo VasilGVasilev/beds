@@ -77,16 +77,7 @@ const Navbar = () => {
         // animation works only on Home page:
         // the Navbar is fixed, meaning when we start the page, it is hidden and scroll makes it appear
         // but also if we refresh down the Home page, due to Navbar also being fixed to viewport, it will appear since being fixed makes it also constanlty inView
-        <motion.div
-            initial="hidden"
-            whileInView="visible"
-            transition={{ duration: 0.2 }}
-            variants = {{
-                hidden: pathName === '/' ? { opacity: 1 } : { },
-                visible: pathName === '/' ? { opacity: 0} : { },
-            }}
 
-        >
             <nav className={`bg-ixora-dark z-40 w-full fixed top-0 py-[2%] sm:py-[1%]`} >
                 <div className="flex items-center justify-between mx-auto w-5/6">
 
@@ -212,7 +203,7 @@ const Navbar = () => {
                     )}
                 </div>
             </nav>
-        </motion.div>
+
     );
 };
 
