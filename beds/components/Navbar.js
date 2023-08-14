@@ -34,6 +34,7 @@ const navbarVariant = {
     visible: { opacity: 1, scale: 1 },
 };
 const LinkMobileTemplate = ({ urlLink, page, setIsMenuToggled }) => {
+    
     const pathName = usePathname()
 
     return (
@@ -77,7 +78,121 @@ const Navbar = () => {
         // animation works only on Home page:
         // the Navbar is fixed, meaning when we start the page, it is hidden and scroll makes it appear
         // but also if we refresh down the Home page, due to Navbar also being fixed to viewport, it will appear since being fixed makes it also constanlty inView
+        <>
+            {/* hidden div to fix navbar being fixed */}
+            <div className={`bg-black z-40 w-full top-0 py-[2%] sm:py-[1%]`} >
+                <div className="flex items-center justify-between mx-auto w-5/6">
 
+                    <div className='saturate-200 duration-200 flex justify-center items-center h-[30%] w-[30%] sm:h-[15%] sm:w-[15%]' >
+                        <img
+                            className="rounded-xl h-10 md:h-16"
+                            // loader={imageLoader}
+                            src="/dm-logo.png"
+                            alt="Ixora Logo"
+
+                        />
+                    </div>
+                    {/* DESKTOP NAV */}
+                    {isDesktop ? (
+                        <div className={`text-xl 2xl:text-2xl flex justify-between gap-10 2xl:gap-16 text-white font-bold`}>
+                            <LinkTemplate
+                                urlLink='/'
+                                page="Начало"
+                            />
+                            <LinkTemplate
+                                urlLink='/order/'
+                                page="Как да поръчам"
+                            />
+                            <LinkTemplate
+                                urlLink='/video/'
+                                page="Видео"
+                            />
+                            <LinkTemplate
+                                urlLink='/contacts/'
+                                page="Контакти"
+                            />
+                        </div>
+                    ) : (
+                        <button
+                            className="rounded-full bg-red p-2"
+                            onClick={() => setIsMenuToggled(!isMenuToggled)}
+                        >
+                            <img alt="menu-icon" src="/assets/menu-icon.svg" width={20} height={20}  />
+                        </button>
+                    )}
+
+                    {/* MOBILE MENU POPUP */}
+                    {!isDesktop && isMenuToggled && (
+                        <motion.div 
+                            className="fixed right-0 bottom-0 h-full bg-ixora-deep-blue w-[300px]"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.1 }}
+                            transition={{ duration: 0.3 }}
+                            variants={{
+                                hidden: { opacity: 0, x: 50 },
+                                visible: { opacity: 1, x: 0 },
+                            }}
+                        >
+                            {/* CLOSE ICON */}
+                            <div className="flex justify-end p-12">
+                                <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                                    <img alt="close-icon" src="/assets/close-icon.svg" />
+                                </button>
+                            </div>
+
+                            {/* MENU ITEMS */}
+                            <motion.div 
+                                className="flex flex-col gap-10 ml-[33%] text-2xl text-white"
+                                variants={container}
+                                initial="hidden"
+                                whileInView="visible"
+                                viewport={{ once: true, amount: 0.2 }}
+                            >
+                                <motion.div
+                                    variants={navbarVariant}
+                                >
+                                    <LinkMobileTemplate
+                                        urlLink='/'
+                                        page="Начало"
+                                        setIsMenuToggled={setIsMenuToggled}
+                                    />
+                                </motion.div>
+                                <motion.div
+                                    variants={navbarVariant}
+                                >
+                                    <LinkMobileTemplate
+                                        urlLink='/order'
+                                        page="Как да поръчам"
+                                        setIsMenuToggled={setIsMenuToggled}
+                                    />
+                                </motion.div>
+                                <motion.div
+                                    variants={navbarVariant}
+                                >
+
+                                    <LinkMobileTemplate
+                                        urlLink='/video'
+                                        page="Видео"
+                                        setIsMenuToggled={setIsMenuToggled}
+                                    />
+                                </motion.div>
+                                <motion.div
+                                    variants={navbarVariant}
+                                >
+
+                                    <LinkMobileTemplate
+                                        urlLink='/contacts'
+                                        page="Контакти"
+                                        setIsMenuToggled={setIsMenuToggled}
+                                    />
+                                </motion.div>
+                            </motion.div>
+                        </motion.div>
+                    )}
+                </div>
+
+            </div>
             <nav className={`bg-black z-40 w-full fixed top-0 py-[2%] sm:py-[1%]`} >
                 <div className="flex items-center justify-between mx-auto w-5/6">
 
@@ -191,6 +306,7 @@ const Navbar = () => {
                 </div>
 
             </nav>
+        </>
 
     );
 };

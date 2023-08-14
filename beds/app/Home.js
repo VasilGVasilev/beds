@@ -30,7 +30,7 @@ export default function Home() {
             <div className="group relative ">
 
                 <img
-                    className="mx-auto w-full h-1/2 bg-white opacity-20 group-hover:opacity-60 transition"
+                    className="mx-auto w-full h-36 bg-white opacity-20 group-hover:opacity-60 transition"
                     // loader={imageLoader}
                     src="/fb-welcome.png"
                     alt="Image"
@@ -39,7 +39,7 @@ export default function Home() {
 
                     <div className="absolute bottom-[15%] sm:bottom-1/3 left-0 w-full h-full flex items-end justify-center ">
                         <motion.div 
-                            className={`font-extrabold welcomeTextOnImg text-blue-600 text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px] animate-bounce `}
+                            className={`font-extrabold welcomeTextOnImg text-blue-600 text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px] animate-bounce group-hover:animate-none `}
                             variants={container}
                             initial="hidden"
                             whileInView="visible"
@@ -132,9 +132,8 @@ export default function Home() {
 
 
             {/* LOCATION */}
-            <>
-                <Maps></Maps>
-            </>
+            <Maps></Maps>
+
 
         </div>
     )
