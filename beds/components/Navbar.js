@@ -115,7 +115,7 @@ const Navbar = () => {
                             className="rounded-full bg-red p-2"
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
                         >
-                            <img alt="menu-icon" src="/assets/menu-icon.png" width={10} height={10} />
+                            <img alt="menu-icon" src="/assets/menu-icon.svg" width={20} height={20}  />
                         </button>
                     )}
 

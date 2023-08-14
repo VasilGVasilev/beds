@@ -2,11 +2,9 @@
 import Link from "next/link"
 import Image from "next/image"
 import { imageLoader } from "../utils/imgLoader"
-import LineGradient from "../components/LineGradient"
 import Maps from "@/components/Location"
 import { motion } from "framer-motion"
 import WelcomeText from "@/components/WelcomeText"
-import { playfair } from "@/utils/fonts"
 import Gallery from "@/components/Gallery"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
@@ -33,7 +31,7 @@ export default function Home() {
 
                 <img
                     className="mx-auto w-full h-1/2 bg-white opacity-20 group-hover:opacity-60 transition"
-                    loader={imageLoader}
+                    // loader={imageLoader}
                     src="/fb-welcome.png"
                     alt="Image"
                 />
@@ -79,10 +77,10 @@ export default function Home() {
                 </Link>
 
             </div>
-            <LineGradient></LineGradient>
+
 
             {/* WELCOME TEXT AND FALLING LIKE A BED ANIMATION */}
-            <div className="lg:flex lg:justify-center lg:items-center lg:p-10 bg-orange-50">
+            <div className="lg:flex lg:justify-center lg:items-center lg:p-10 bg-gray-100">
                 {/* WELCOME TEXT */}
                 <div className="lg:basis-[30%]">
                     <div className={` p-10`}>
@@ -126,18 +124,18 @@ export default function Home() {
 
                 </motion.div>
             </div>
-            <LineGradient></LineGradient>
+
 
 
             {/* GALLERY */}
             <Gallery></Gallery>
-            <LineGradient></LineGradient>
+
 
             {/* LOCATION */}
             <>
                 <Maps></Maps>
             </>
-            <LineGradient></LineGradient>
+
         </div>
     )
 }
