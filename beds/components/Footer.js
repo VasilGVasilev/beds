@@ -15,9 +15,9 @@ const Footer = ({toTopHandle}) => {
             </div>
             <div className='md:text-center'>
               <div className='text-blue-600 font-mono text-xl'>Контакти</div>
-              <div className='p-3 flex flex-col justify-center items-center'>
-                <div className="py-2 flex space-x-3 items-center justify-center">
-                  <Image
+              <div className='p-3 flex flex-col '>
+                <div className="py-2 flex space-x-2 ">
+                  <img
                     src="/green-phone.svg"
                     alt="Phone Ring"
                     className="bg-transparent animate-pulse"
@@ -26,15 +26,15 @@ const Footer = ({toTopHandle}) => {
                   />
                   <div className="text-sm text-green-600"><a href={`tel:00359888368256`}>0888368256</a></div>
                 </div>
-                <div className="py-2 flex space-x-2 items-center justify-center">
+                <div className="py-2 flex space-x-2">
                   <img
                     src="/assets/fb.svg"
                     alt="facebook"
                     className="bg-transparent animate-pulse"
-                    width={50}
-                    height={50}
+                    width={20}
+                    height={8}
                   />
-                  <div className="text-sm whitespace-nowrap text-blue-600"><a href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>Фейсбук страница</a></div>
+                  <div className="text-sm text-blue-600"><a href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>Фейсбук страница</a></div>
                 </div>
               </div>
             </div>
