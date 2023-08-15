@@ -4,7 +4,7 @@ const Footer = ({toTopHandle}) => {
     return (
         <div className="h-fit w-full flex-col p-10 bg-gradient-to-b from-black from-10% via-black via-40% to-gray-900 to-70% lg:px-40">
         <div className='flex justify-center relative bottom-12'>
-          <img src="/up-to-top.png" className="w-16 h-16 cursor-pointer animate-bounce bg-white rounded-2xl" onClick={toTopHandle} alt="up-to-top-btn" />
+          <img src="/up-to-top.webp" className="w-16 h-16 cursor-pointer animate-bounce bg-white rounded-2xl" onClick={toTopHandle} alt="up-to-top-btn" />
         </div>
         <div className='flex justify-center items-center'>
           <div className='md:flex md:justify-center'>

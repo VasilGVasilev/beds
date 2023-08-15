@@ -47,7 +47,7 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <img src="/step-one.png" alt="step-img" className="w-40 h-40 md:basis-1/6" />
+                    <img src="/step-one.webp" alt="step-img" className="w-40 h-40 md:basis-1/6" />
                     <div className="md:basis-5/6 justify-center items-center" >
                         За да получите ценова оферта за падащи легла, можете да направите обаждане на нашия телефон <a className="text-green-600 text-5xl" href={`tel:00359888368256`}>0888368256</a>.
                     </div>
@@ -64,7 +64,7 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <img src="/step-two.png" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
+                    <img src="/step-two.webp" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
                     <div className="md:order-1 md:basis-5/6">
                         След като одобрите ценовата оферта, ние ще ви изпратим договор за изработка. След подписване на договора, ние ще започнем да работим по вашата поръчка.
                     </div>
@@ -81,7 +81,7 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <img src="/step-three.png" alt="step-img" className="w-40 h-40 md:basis-1/6" />
+                    <img src="/step-three.webp" alt="step-img" className="w-40 h-40 md:basis-1/6" />
                     <div className="md:basis-5/6"> 
                         За да платите за вашата поръчка, можете да направите банков превод или да платите в офиса на фирмата.
                     </div>
@@ -98,7 +98,7 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <img src="/step-four.png" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
+                    <img src="/step-four.webp" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
                     <div className="md:order-1 md:basis-5/6">
                         След като платите, ние ще се свържем с вас, за да уговорим ден и час, в който да посетим вашия дом и да снемаме точни размери на помещението, което ще обзавеждаме.
                     </div>
@@ -115,7 +115,7 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <img src="/step-five.png" alt="step-img" className="w-40 h-40 md:basis-1/6" />
+                    <img src="/step-five.webp" alt="step-img" className="w-40 h-40 md:basis-1/6" />
                     <div className="md:basis-5/6">
                         Ако имате някакви забележки, промени по проекта могат да се правят до окончателното му одобрение от Ваша страна.
                     </div>
@@ -132,7 +132,7 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <img src="/step-six.png" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
+                    <img src="/step-six.webp" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
                     <div className="md:order-1 md:basis-5/6 ">
                         Няколко дни преди доставката ние ще се свържем с Вас, за да потвърдим монтажа.
                     </div>

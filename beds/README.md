@@ -4,7 +4,7 @@ This is a Next.js Static Site Generation freelance project developed via Tailwin
 
 ## [Go to Website](https://ixorabg.com/)
 
-[![alt text](https://github.com/VasilGVasilev/nextJS/blob/ixoraInter/ixora/welcome-img-ixora.png)](https://ixorabg.com/)
+[![alt text](https://github.com/VasilGVasilev/nextJS/blob/ixoraInter/ixora/welcome-img-ixora.webp)](https://ixorabg.com/)
 
 ## What's in the stack
 
@@ -37,4 +37,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Performance, Accessibility, Best Practices, SEO:
 
-![alt text](https://github.com/VasilGVasilev/nextJS/blob/ixoraInter/ixora/lighthouse.png)
+![alt text](https://github.com/VasilGVasilev/nextJS/blob/ixoraInter/ixora/lighthouse.webp)

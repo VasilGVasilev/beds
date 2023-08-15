@@ -20,7 +20,7 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 const reviews = [{
     id: 'asdasd',
     user: {
-        avatar: '/client-one.jpg',
+        avatar: '/client-one.webp',
         name: 'Desi Focusonyou'
     },
     date: '8 май',
@@ -29,7 +29,7 @@ const reviews = [{
 {
     id: 'asdasd',
     user: {
-        avatar: '/client-two.jpg',
+        avatar: '/client-two.webp',
         name: 'Ivelina Mladenova'
     },
     date: '27 април',
@@ -38,7 +38,7 @@ const reviews = [{
 {
     id: 'asdasd',
     user: {
-        avatar: '/client-three.jpg',
+        avatar: '/client-three.webp',
         name: 'Лъчезар Симеонов'
     },
     date: '5 януари',

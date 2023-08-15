@@ -102,7 +102,7 @@ const Navbar = () => {
                         <img
                             className="rounded-xl h-10 md:h-16"
                             loader={imageLoader}
-                            src="/dm-logo.png"
+                            src="/dm-logo.webp"
                             alt="Ixora Logo"
 
                         />

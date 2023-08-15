@@ -1,4 +1,4 @@
-const url = 'https://ixorabg.com'
+const url = 'https://testvgv.net'
 
 export default async function sitemap() {
     const routes = ['', , '/contacts', '/order', '/video', '/opinions', ].map((route) => ({

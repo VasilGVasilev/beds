@@ -20,7 +20,7 @@ export default function Contacts() {
         <img
           className="mx-auto w-full h-full bg-white opacity-10 "
           // loader={imageLoader}
-          src="/contact-bg.jpg"
+          src="/contact-bg.webp"
           alt="Image"
         />
 

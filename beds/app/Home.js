@@ -32,7 +32,7 @@ export default function Home() {
                 <img
                     className="mx-auto w-full h-36 bg-white opacity-20 group-hover:opacity-60 transition"
                     // loader={imageLoader}
-                    src="/fb-welcome.png"
+                    src="/fb-welcome.webp"
                     alt="Image"
                 />
                 <Link href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>
@@ -80,6 +80,7 @@ export default function Home() {
 
 
             {/* WELCOME TEXT AND FALLING LIKE A BED ANIMATION */}
+            
             <div className="lg:flex lg:justify-center lg:items-center lg:p-10 bg-gray-100">
                 {/* WELCOME TEXT */}
                 <div className="lg:basis-[30%]">
