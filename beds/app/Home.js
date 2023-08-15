@@ -112,7 +112,7 @@ export default function Home() {
                     }}
                 >
 
-                    <Link href={'/apartments'}>
+
                         <img
                             className="transition-transform duration-700 ease-in-out hover:scale-110"
                             // loader={imageLoader}
@@ -120,7 +120,7 @@ export default function Home() {
 
                             alt="Image"
                         />
-                    </Link>
+
 
                 </motion.div>
             </div>
