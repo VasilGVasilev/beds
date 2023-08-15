@@ -12,14 +12,34 @@ export default function Order() {
 
     return (
         <>
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                className="font-semibold flex justify-center items-center m-20"
+                viewport={{ once: true }}
 
+                animate={{
+                    scale: [1, 2, 2, 1, 1],
+                    rotate: [0, 0, 180, 180, 0],
+                    borderRadius: ["0%", "0%", "50%", "50%", "0%"]
+                }}
+                transition={{
+                    duration: 2,
+                    ease: "easeInOut",
+                    times: [0, 0.2, 0.5, 0.8, 1],
+                }}
+            >
+                <div className="text-4xl text-white">
+                    КАК ДА ПОРЪЧАМ?
+                </div>
+            </motion.div>
             {/* Container for Steps */}
-            <div className="bg-ixora-dark px-5 w-full h-full flex-col justify-center items-center space-y-5">
+            <div className="bg-white p-20 w-full h-full flex-col justify-center items-center space-y-5 text-black text-justify font-semibold">
                 {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    className="flex justify-center items-center"
+                    className="flex flex-col md:flex-row justify-center items-center"
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -27,15 +47,16 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <div>1</div>
-                    <div>
-                        asdasd
+                    <img src="/step-one.png" alt="step-img" className="w-40 h-40 md:basis-1/6" />
+                    <div className="md:basis-5/6 justify-center items-center" >
+                        За да получите ценова оферта за мебели или цялостно обзавеждане, можете да изпратите запитване на нашия сайт. В запитването моля напишете кои мебели желаете и какви са габаритните размери на помещението, което ще обзавеждате. В рамките на 3 работни дни ще получите ценова оферта.
                     </div>
                 </motion.div>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    className="flex justify-center items-center"
+                    className="flex flex-col md:flex-row justify-center items-center"
+                    
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -43,15 +64,16 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <div>2</div>
-                    <div>
-                        asdasd
+                    <img src="/step-two.png" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
+                    <div className="md:order-1 md:basis-5/6">
+                        След като одобрите ценовата оферта, ние ще ви изпратим договор за изработка. След подписване на договора, ние ще започнем да работим по вашата поръчка.
                     </div>
                 </motion.div>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    className="flex justify-center items-center"
+                    className="flex flex-col md:flex-row justify-center items-center"
+                    
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -59,15 +81,16 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <div>3</div>
-                    <div>
-                        asdasd
+                    <img src="/step-three.png" alt="step-img" className="w-40 h-40 md:basis-1/6" />
+                    <div className="md:basis-5/6"> 
+                        За да платите за вашата поръчка, можете да направите банков превод или да платите в офиса на фирмата.
                     </div>
                 </motion.div>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    className="flex justify-center items-center"
+                    className="flex flex-col md:flex-row justify-center items-center"
+                    
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -75,15 +98,16 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <div>4</div>
-                    <div>
-                        asdasd
+                    <img src="/step-four.png" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
+                    <div className="md:order-1 md:basis-5/6">
+                        След като платите, ние ще се свържем с вас, за да уговорим ден и час, в който да посетим вашия дом и да снемаме точни размери на помещението, което ще обзавеждаме.
                     </div>
                 </motion.div>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    className="flex justify-center items-center"
+                    className="flex flex-col md:flex-row justify-center items-center"
+                    
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -91,15 +115,16 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <div>5</div>
-                    <div>
-                        asdasd
+                    <img src="/step-five.png" alt="step-img" className="w-40 h-40 md:basis-1/6" />
+                    <div className="md:basis-5/6">
+                        Ако имате някакви забележки, промени по проекта могат да се правят до окончателното му одобрение от Ваша страна.
                     </div>
                 </motion.div>
                 <motion.div
                     initial="hidden"
                     whileInView="visible"
-                    className="flex justify-center items-center"
+                    className="flex flex-col md:flex-row justify-center items-center"
+                    
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -107,9 +132,9 @@ export default function Order() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <div>6</div>
-                    <div>
-                        asdasd
+                    <img src="/step-six.png" alt="step-img" className="w-40 h-40 md:order-2 md:basis-1/6" />
+                    <div className="md:order-1 md:basis-5/6 ">
+                        Няколко дни преди доставката ние ще се свържем с Вас, за да потвърдим монтажа.
                     </div>
                 </motion.div>
 
