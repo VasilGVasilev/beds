@@ -8,6 +8,7 @@ import WelcomeText from "@/components/WelcomeText"
 import Gallery from "@/components/Gallery"
 
 export const revalidate = 0; // revalidate this page every 60 seconds
+
 const container = {
     hidden: {},
     visible: {

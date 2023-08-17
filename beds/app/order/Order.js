@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
-const buildingProcessLayout = "pb-10 px-5 h-full w-full lg:h-96 flex justify-center"
 export default function Order() {
 
     return (
