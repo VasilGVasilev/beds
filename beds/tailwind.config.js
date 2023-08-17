@@ -8,14 +8,10 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: (theme) => ({
-        "gradient-ixora":
-          "linear-gradient(81.66deg, #f83600 7.21%, #fe8c00 78.07%)",
-          "ixora-img-description": "url('/ixora-description.webp')",
+          "contacts-bg": "url('/contact-bg.webp')",
       }),
       colors: {
         'ixora-deep-blue': '#111827',
-        'ixora-brown': '#464646',
-        'ixora-orange': '#ea580c',
         'ixora-dark': '#292927'
       },
       animation: {

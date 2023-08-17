@@ -1,11 +1,12 @@
 import { FBPicture } from "./FBPicture"
 import { motion } from "framer-motion";
-
 const picturesArr = [
+  "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02UsjNuMgPymBRkayej8d6vZsbRrQAdEEZ9mwjHovtuuDGbhDKLoU3BxU3J99f2F51l%26id%3D100042058017286&show_text=true&width=500",
+  "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fpermalink.php%3Fstory_fbid%3Dpfbid02CRzvsTaaXPWYgJs9BfmS5hwfqkg8Jmtt71FZSpsvEQrmiWRQi8TsLkRTFTtyoE14l%26id%3D100042058017286&show_text=true&width=500",
   "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D1005300210881903%26set%3Da.732137868198140%26type%3D3&show_text=true&width=500",
   "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D957912302287361%26set%3Da.732137868198140%26type%3D3&show_text=true&width=500",
   "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D952058002872791%26set%3Da.732137868198140%26type%3D3&show_text=true&width=500",
-  "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D937450801000178%26set%3Da.732137868198140%26type%3D3&show_text=true&width=500"
+  "https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fphoto.php%3Ffbid%3D937450801000178%26set%3Da.732137868198140%26type%3D3&show_text=true&width=500",
 ]
 
 

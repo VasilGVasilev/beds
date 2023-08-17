@@ -11,7 +11,7 @@ const Footer = ({toTopHandle}) => {
 
             <div className='md:text-center'>
               <div className='text-blue-600 font-mono text-xl'>DM - падащи легла</div>
-              <div className='p-3 text-white font-mono text-sm'>Ние предлагаме огромно разнообразие, като всеки дизайн е съобразен със специфичните преференции на клиента. Потърсете ни сега, за да реализираме Вашите идеи. </div>
+              <div className='p-3 text-white font-mono text-sm text-justify'>Ние предлагаме огромно разнообразие, като всеки дизайн е съобразен със специфичните преференции на клиента. Потърсете ни сега, за да реализираме Вашите идеи. </div>
             </div>
             <div className='md:text-center'>
               <div className='text-blue-600 font-mono text-xl'>Контакти</div>

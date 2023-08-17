@@ -5,11 +5,25 @@ import { GoComment } from 'react-icons/go';
 import { PiShareFat } from 'react-icons/pi'
 import { BiWorld } from 'react-icons/bi';
 
+import { motion } from "framer-motion";
+
+
 export const Review = ({review}) => {
     return (
         <Link href={'https://www.facebook.com/profile.php?id=100042058017286&sk=reviews'}>
 
-            <li key={review.id} className="flex flex-col md:w-128 md:mx-auto p-4 m-10 bg-[#242526] text-[#E4E6EB] rounded-md">
+            <motion.li 
+                key={review.id} 
+                className="flex flex-col md:w-128 md:mx-auto p-4 m-10 bg-[#242526] text-[#E4E6EB] rounded-md"
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true }}
+                transition={{ delay: 0.3, duration: 0.5 }}
+                variants={{
+                    hidden: { opacity: 0, scale: 0.1 },
+                    visible: { opacity: 1, scale: 1 },
+                }}
+            >
                 <div className="flex flex-row">
                     <img
                         src={review.user.avatar}
@@ -50,7 +64,7 @@ export const Review = ({review}) => {
                     </div>
 
                 </div>
-            </li>
+            </motion.li>
         </Link>
     )
 }
