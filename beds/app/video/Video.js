@@ -25,39 +25,33 @@ export default function Video() {
 
 
     return (
-        <>
-            <motion.h2
-                initial="hidden"
-                whileInView="visible"
-                className="font-semibold flex justify-center items-center m-20"
-                viewport={{ once: true }}
-                transition={{ duration: 0.5 }}
-                variants={{
-                    hidden: { opacity: 0, scale: 0.1 },
-                    visible: { opacity: 1, scale: 1 },
-                }}
-            >
-                <div className="text-6xl text-white">
-                    Видео
-                </div>
-            </motion.h2>
-            
-            <motion.div 
-                className="flex flex-row flex-wrap m-10 gap-10 justify-center items-center"
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true }}
-                transition={{ delay: 0.5, duration: 0.5 }}
-                variants={{
-                    hidden: { opacity: 0, scale: 0.1 },
-                    visible: { opacity: 1, scale: 1 },
-                }}
-            >
-                {videoArr.map((videoURL) => (
-                    <FBVideo key={videoURL} url={videoURL}></FBVideo>
-                ))}
-            </motion.div>
+        <div className="bg-ixora-deep-blue flex flex-col">
 
-        </>
+                <div className="bg-gray-800 m-10 rounded-sm flex justify-center items-center">
+                    <motion.h2
+                        initial="hidden"
+                        whileInView="visible"
+                        className="font-semibold flex justify-center items-center m-20"
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        variants={{
+                            hidden: { opacity: 0, scale: 0.1 },
+                            visible: { opacity: 1, scale: 1 },
+                        }}
+                    >
+                        <div className="text-4xl text-white">
+                            Видеоклипове
+                        </div>
+                    </motion.h2>
+                </div>
+
+                <div
+                    className="flex flex-row flex-wrap m-10 gap-10 justify-center items-center"
+                >
+                    {videoArr.map((videoURL) => (
+                        <FBVideo key={videoURL} url={videoURL}></FBVideo>
+                    ))}
+                </div>
+        </div>
     )
 }

@@ -18,8 +18,8 @@ export default function RootLayout({ children }) {
 // #464646
   return (
     
-    <html lang="bg-ixora-deep-blue" className={`scroll-smooth overflow-x-hidden`}>
-      <body className='bg-ixora-deep-blue overflow-x-hidden'>
+    <html lang="bg-black" className={`scroll-smooth overflow-x-hidden`}>
+      <body className='bg-black overflow-x-hidden'>
 
         <Navbar
         />

@@ -25,7 +25,7 @@ const letterVariant = {
 
 export default function Home() {
     return (
-        <div>
+        <div className="bg-ixora-deep-blue flex flex-col">
             {/* WELCOME IMAGE */}
 
             <div className="group relative ">
