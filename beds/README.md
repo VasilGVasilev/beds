@@ -37,4 +37,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Performance, Accessibility, Best Practices, SEO:
 
-![alt text](https://github.com/VasilGVasilev/nextJS/blob/ixoraInter/ixora/lighthouse.webp)
+
