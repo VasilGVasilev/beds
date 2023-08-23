@@ -1,6 +1,6 @@
 # Next.js SSG website
 
-This is a Next.js Static Site Generation freelance project developed via Tailwind, React and Framer Motion. It promotes the sales of beds. The website has mobile responsiveness, animations for a seamless UX and its main feature is the utilization of facebook embedded segments.
+This is a Next.js Static Site Generation freelance project developed via Tailwind, React and Framer Motion. It promotes the sales of beds. The website has mobile responsiveness, animations for a seamless UX. The main feature is the utilization of facebook embedded segments.
 
 ## [Go to Website](https://ixorabg.com/)
 
