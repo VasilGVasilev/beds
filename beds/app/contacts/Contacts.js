@@ -18,7 +18,7 @@ export default function Contacts() {
       <div className="relative ">
 
         <img
-          className="mx-auto w-full h-96 bg-white opacity-10 "
+          className="mx-auto w-full h-96 bg-white opacity-[0.15] "
           // loader={imageLoader}
           src="/contact-bg.webp"
           alt="Image"
@@ -42,19 +42,22 @@ export default function Contacts() {
 
             <div className=" text-white flex flex-col gap-5">
               <div>
-                <p>
+                <p className="underline pb-3">
                   Адрес:
                 </p>
                 <p>
-                  бул. име на булевард, бл.100
+                  София, Овча Купел 1
                 </p>
                 <p>
-                  пощенски код, ж.к. нещо си, гр. София
+                  бл.423, ап.1
                 </p>
               </div>
               <div>
+                <p className="underline pb-3">
+                  Телефон:
+                </p>
                 <p>
-                  Телефон: <a href={`tel:00359888368256`} className="text-green-600 text-4xl">0888368256</a>
+                  <a href={`tel:00359888368256`} className="text-green-600 text-4xl">0888368256</a>
                 </p>
               </div>
 
@@ -66,7 +69,7 @@ export default function Contacts() {
         </div>
 
       </div>
-      
+
       <Maps></Maps>
     </>
   )

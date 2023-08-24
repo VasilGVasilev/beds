@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 import { AiOutlineClose } from 'react-icons/ai';
 import { motion } from "framer-motion"
 
-import { useClickAway } from 'react-use'
 
 
 // props: 
@@ -35,9 +34,10 @@ const navbarVariant = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 },
 };
+
 const LinkMobileTemplate = ({ urlLink, page, setIsMenuToggled }) => {
 
-    const pathName = usePathname()
+    const pathName = usePathname();
 
     return (
         <Link
@@ -55,7 +55,9 @@ const LinkMobileTemplate = ({ urlLink, page, setIsMenuToggled }) => {
 };
 
 const LinkTemplate = ({ urlLink, page }) => {
+
     const pathName = usePathname();
+
     return (
         <Link
             href={urlLink}
@@ -74,10 +76,15 @@ const Navbar = () => {
     const isDesktop = useMediaQuery("(min-width: 900px)");
 
     const modalRef = useRef(null);
-    useClickAway(modalRef, () => {
-        setIsMenuToggled(!isMenuToggled)
-    });
 
+    const closeModal = (e) => {
+        e.stopPropagation();
+        if (e.target == modalRef.current) {
+            setIsMenuToggled(!isMenuToggled)
+
+        }
+
+    }
 
     return (
         <>
@@ -147,11 +154,12 @@ const Navbar = () => {
                     {/* MOBILE MENU POPUP */}
                     {!isDesktop && isMenuToggled && (
                         <div
-                            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
-
+                            className="fixed inset-0 z-40 flex items-center justify-center bg-black bg-opacity-80"
+                            onClick={closeModal}
+                            ref={modalRef}
                         >
                             <motion.div
-                                className="fixed right-0 bottom-0 h-full bg-ixora-deep-blue w-[300px]"
+                                className="fixed z-50 right-0 bottom-0 h-full bg-ixora-deep-blue w-[300px]"
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.1 }}
@@ -160,7 +168,7 @@ const Navbar = () => {
                                     hidden: { opacity: 0, x: 50 },
                                     visible: { opacity: 1, x: 0 },
                                 }}
-                                ref={modalRef}
+                            // ref={modalRef}
 
                             >
                                 {/* CLOSE ICON */}
@@ -240,4 +248,4 @@ const Navbar = () => {
 
 export default Navbar;
 
-// see how-click-away-works.md
+// see how-click-away-works.md, although I use my own solution with DOM manipulation

@@ -32,6 +32,7 @@ export default function Order() {
                     КАК ДА ПОРЪЧАМ?
                 </div>
             </motion.div>
+
             {/* Container for Steps */}
             <div className="bg-white p-20 w-full h-full flex-col justify-center items-center space-y-5 text-black text-justify font-semibold">
                 {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
@@ -55,7 +56,7 @@ export default function Order() {
                     initial="hidden"
                     whileInView="visible"
                     className="flex flex-col md:flex-row justify-center items-center"
-                    
+
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -72,7 +73,7 @@ export default function Order() {
                     initial="hidden"
                     whileInView="visible"
                     className="flex flex-col md:flex-row justify-center items-center"
-                    
+
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -81,7 +82,7 @@ export default function Order() {
                     }}
                 >
                     <img src="/step-three.webp" alt="step-img" className="w-40 h-40 md:basis-1/6 lg:basis-1/12" />
-                    <div className="md:basis-5/6 lg:basis-11/12 justify-center items-center"> 
+                    <div className="md:basis-5/6 lg:basis-11/12 justify-center items-center">
                         За да платите за вашата поръчка, можете да направите банков превод или да платите в офиса на фирмата.
                     </div>
                 </motion.div>
@@ -89,7 +90,7 @@ export default function Order() {
                     initial="hidden"
                     whileInView="visible"
                     className="flex flex-col md:flex-row justify-center items-center"
-                    
+
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -106,7 +107,7 @@ export default function Order() {
                     initial="hidden"
                     whileInView="visible"
                     className="flex flex-col md:flex-row justify-center items-center"
-                    
+
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -123,7 +124,7 @@ export default function Order() {
                     initial="hidden"
                     whileInView="visible"
                     className="flex flex-col md:flex-row justify-center items-center"
-                    
+
                     viewport={{ once: true }}
                     transition={{ delay: 0.4, duration: 0.6 }}
                     variants={{
@@ -139,6 +140,165 @@ export default function Order() {
 
             </div>
 
+            <div
+                className="font-semibold flex justify-center items-center m-20"
+            >
+                <div className="text-4xl text-white">
+                    Цени
+                </div>
+            </div>
+
+            {/* Container for Prices */}
+            <div className="bg-white p-20 w-full h-full flex-col justify-center items-center space-y-10 text-black text-justify text-lg font-semibold">
+                {/* Container for image with overflow effect, this template to be used for subsequent pictures */}
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-col md:flex-row justify-center items-center"
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -200 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <div className=" justify-center items-center" >
+                        Легло за матрак 90 х 190 см с размери 101.1 х 198.8 х 38 см: цена 1015 лв
+                    </div>
+                </motion.div>
+                <hr />
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-col md:flex-row justify-center items-center"
+
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, x: 200 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <div className=" justify-center items-center">
+                        Легло за матрак 72 х 190 см с размери 83.1 х 198.8 х 38 см: цена 1015 лв
+                    </div>
+                </motion.div>
+                <hr />
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-col md:flex-row justify-center items-center"
+
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -200 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <div className=" justify-center items-center">
+                        Легло за матрак 82 х 190 см с размери 93.1 х 198.8 х 38 см: цена 1015 лв
+                    </div>
+                </motion.div>
+                <hr />
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-col md:flex-row justify-center items-center"
+
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, x: 200 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <div className=" justify-center items-center">
+                        Легло за матрак  140 х 190 см с размери 151.1 х 198.8 х 38 см: цена 1190 лв
+                    </div>
+                </motion.div>
+                <hr />
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-col md:flex-row justify-center items-center"
+
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -200 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <div className=" justify-center items-center">
+                        Легло за матрак  144 х 190 см с размери 155.1 х 198.8 х 38 см: цена 1190 лв
+                    </div>
+                </motion.div>
+                <hr />
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-col md:flex-row justify-center items-center"
+
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, x: 200 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <div className=" justify-center items-center ">
+                        Легло за матрак  150 х 190 см с размери 161.1 х 198.8 х 38 см: цена 1190 лв
+                    </div>
+                </motion.div>
+                <hr />
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-col md:flex-row justify-center items-center"
+
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, x: -200 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <div className=" justify-center items-center">
+                        Легло за матрак  160 х 190 см с размери 171.1 х 198.8 х 38 см: цена 1190 лв
+                    </div>
+                </motion.div>
+                <hr />
+
+                <motion.div
+                    initial="hidden"
+                    whileInView="visible"
+                    className="flex flex-col md:flex-row justify-center items-center"
+
+                    viewport={{ once: true }}
+                    transition={{ delay: 0.4, duration: 0.6 }}
+                    variants={{
+                        hidden: { opacity: 0, x: 200 },
+                        visible: { opacity: 1, x: 0 },
+                    }}
+                >
+                    <div className=" justify-center items-center ">
+                        Легло за матрак  164 х 190 см с размери 175.1 х 198.8 х 38 см: цена 1190 лв
+                    </div>
+                </motion.div>
+
+            </div>
+            <div
+                className=" flex justify-center items-center m-10"
+            >
+                <div className="sm:text-2xl text-white font-extrabold text-justify">
+                    ВАЖНО: Цените са с включена доставка /вкл. качване до етаж/ и монтаж за гр. София  /за други населени места тези услуги са по запитване/. Вземането на размери на място преди поръчка е силно препоръчително, тази услуга не се заплаща.
+                </div>
+            </div>
         </div>
     )
 }

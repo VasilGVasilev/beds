@@ -17,10 +17,10 @@ const container = {
         },
     },
 };
-  
+
 const letterVariant = {
-    hidden: { opacity: 0},
-    visible: { opacity: 1},
+    hidden: { opacity: 0 },
+    visible: { opacity: 1 },
 };
 
 export default function Home() {
@@ -39,7 +39,7 @@ export default function Home() {
                 <Link href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>
 
                     <div className="absolute bottom-[15%] sm:bottom-1/3 left-0 w-full h-full flex items-end justify-center ">
-                        <motion.div 
+                        <motion.div
                             className={`font-extrabold welcomeTextOnImg text-blue-600 text-center text-2xl md:text-4xl lg:text-6xl xl:text-[80px] animate-bounce group-hover:animate-none `}
                             variants={container}
                             initial="hidden"
@@ -81,47 +81,73 @@ export default function Home() {
 
 
             {/* WELCOME TEXT AND FALLING LIKE A BED ANIMATION */}
-            
+
             <div className="lg:flex lg:justify-center lg:items-center lg:p-10 bg-gray-100">
                 {/* WELCOME TEXT */}
                 <div className="lg:basis-[30%]">
                     <div className={` p-10`}>
                         <motion.div
-                            className="py-5 text-ixora-orange text-left text-3xl font-extrabold"
+                            className="py-5"
                             initial="hidden"
                             whileInView="visible"
                             viewport={{ once: true, amount: 0.5 }}
-                            transition={{ delay: 0.3 ,duration: 0.5 }}
+                            transition={{ delay: 0.3, duration: 0.5 }}
                             variants={{
                                 hidden: { opacity: 0, x: -50 },
                                 visible: { opacity: 1, x: 0 },
-                            }} 
-                            ><img src="/assets/triangle.svg" alt="triangle" className="bg-inherit" /> </motion.div>
+                            }}
+                        ><img src="/assets/triangle.svg" alt="triangle" className="bg-inherit" /> </motion.div>
                         <WelcomeText></WelcomeText>
+                        <motion.div
+                            className="py-5"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ delay: 2, duration: 0.7 }}
+                            variants={{
+                                hidden: { opacity: 0, x: 50 },
+                                visible: { opacity: 1, x: 0 },
+                            }}
+                        >
+                            <span className="font-extrabold">Материал:</span> ЛПДЧ 18 мм
+                        </motion.div>
+                        <motion.div
+                            className="py-5"
+                            initial="hidden"
+                            whileInView="visible"
+                            viewport={{ once: true, amount: 0.5 }}
+                            transition={{ delay: 1, duration: 0.3 }}
+                            variants={{
+                                hidden: { opacity: 0, x: -50 },
+                                visible: { opacity: 1, x: 0 },
+                            }}
+                        >
+                            <Link href={'/order'} className="font-extrabold text-blue-600 ">За цени кликнете тук</Link>
+                        </motion.div>
                     </div>
                 </div>
 
                 {/* WELCOME IMAGE */}
-                <motion.div 
+                <motion.div
                     className=""
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
-                    transition={{ delay:0.4 ,duration: 0.5 }}
+                    transition={{ delay: 0.4, duration: 0.5 }}
                     variants={{
-                      hidden: { opacity: 0, x: 50 },
-                      visible: { opacity: 1, x: 0 },
+                        hidden: { opacity: 0, x: 50 },
+                        visible: { opacity: 1, x: 0 },
                     }}
                 >
 
 
-                        <img
-                            className="transition-transform duration-700 ease-in-out hover:scale-110"
-                            // loader={imageLoader}
-                            src="/assets/folding-bed.gif"
+                    <img
+                        className="transition-transform duration-700 ease-in-out hover:scale-110"
+                        // loader={imageLoader}
+                        src="/assets/folding-bed.gif"
 
-                            alt="Image"
-                        />
+                        alt="Image"
+                    />
 
 
                 </motion.div>
