@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import Link from 'next/link'
 
@@ -7,6 +7,8 @@ import Image from 'next/image'
 import { usePathname } from "next/navigation";
 import { AiFillCloseCircle } from 'react-icons/ai';
 import { motion } from "framer-motion"
+
+import { useClickAway } from 'react-use'
 
 
 // props: 
@@ -34,7 +36,7 @@ const navbarVariant = {
     visible: { opacity: 1, scale: 1 },
 };
 const LinkMobileTemplate = ({ urlLink, page, setIsMenuToggled }) => {
-    
+
     const pathName = usePathname()
 
     return (
@@ -43,8 +45,8 @@ const LinkMobileTemplate = ({ urlLink, page, setIsMenuToggled }) => {
             className={`${pathName === urlLink ? "text-yellow-500" : ""
                 }  hover:scale-125 transition duration-300`}
             onClick={() => {
-                    setIsMenuToggled(false);
-                }
+                setIsMenuToggled(false);
+            }
             }
         >
             {page}
@@ -70,9 +72,12 @@ const LinkTemplate = ({ urlLink, page }) => {
 const Navbar = () => {
     const [isMenuToggled, setIsMenuToggled] = useState(false);
     const isDesktop = useMediaQuery("(min-width: 900px)");
-    const pathName = usePathname();
 
-    
+    const modalRef = useRef(null);
+    useClickAway(modalRef, () => {
+        setIsMenuToggled(!isMenuToggled)
+    });
+
 
     return (
         <>
@@ -135,14 +140,17 @@ const Navbar = () => {
                             className="rounded-full bg-red p-2"
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
                         >
-                            <img alt="menu-icon" src="/assets/menu-icon.svg" width={20} height={20}  />
+                            <img alt="menu-icon" src="/assets/menu-icon.svg" width={20} height={20} />
                         </button>
                     )}
 
                     {/* MOBILE MENU POPUP */}
                     {!isDesktop && isMenuToggled && (
-                        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
-                            <motion.div 
+                        <div
+                            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+
+                        >
+                            <motion.div
                                 className="fixed right-0 bottom-0 h-full bg-ixora-deep-blue w-[300px]"
                                 initial="hidden"
                                 whileInView="visible"
@@ -152,16 +160,17 @@ const Navbar = () => {
                                     hidden: { opacity: 0, x: 50 },
                                     visible: { opacity: 1, x: 0 },
                                 }}
+                                ref={modalRef}
+
                             >
                                 {/* CLOSE ICON */}
                                 <div className="flex justify-end p-12">
                                     <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
-                                        <AiFillCloseCircle size={24} className="bg-white rounded-full" />
                                     </button>
                                 </div>
 
                                 {/* MENU ITEMS */}
-                                <motion.div 
+                                <motion.div
                                     className="flex flex-col gap-10 ml-[33%] text-2xl text-white"
                                     variants={container}
                                     initial="hidden"
@@ -229,3 +238,5 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+// see how-click-away-works.md
