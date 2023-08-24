@@ -126,19 +126,19 @@ const Navbar = () => {
                                 page="Начало"
                             />
                             <LinkTemplate
-                                urlLink='/order/'
+                                urlLink='/order'
                                 page="Как да поръчам"
                             />
                             <LinkTemplate
-                                urlLink='/video/'
+                                urlLink='/video'
                                 page="Видео"
                             />
                             <LinkTemplate
-                                urlLink='/opinions/'
+                                urlLink='/opinions'
                                 page="Мнения"
                             />
                             <LinkTemplate
-                                urlLink='/contacts/'
+                                urlLink='/contacts'
                                 page="Контакти"
                             />
                         </div>
@@ -199,7 +199,7 @@ const Navbar = () => {
                                         variants={navbarVariant}
                                     >
                                         <LinkMobileTemplate
-                                            urlLink='/order/'
+                                            urlLink='/order'
                                             page="Как да поръчам"
                                             setIsMenuToggled={setIsMenuToggled}
                                         />
@@ -209,7 +209,7 @@ const Navbar = () => {
                                     >
 
                                         <LinkMobileTemplate
-                                            urlLink='/video/'
+                                            urlLink='/video'
                                             page="Видео"
                                             setIsMenuToggled={setIsMenuToggled}
                                         />
@@ -219,7 +219,7 @@ const Navbar = () => {
                                     >
 
                                         <LinkMobileTemplate
-                                            urlLink='/opinions/'
+                                            urlLink='/opinions'
                                             page="Мнения"
                                             setIsMenuToggled={setIsMenuToggled}
                                         />
@@ -229,7 +229,7 @@ const Navbar = () => {
                                     >
 
                                         <LinkMobileTemplate
-                                            urlLink='/contacts/'
+                                            urlLink='/contacts'
                                             page="Контакти"
                                             setIsMenuToggled={setIsMenuToggled}
                                         />
