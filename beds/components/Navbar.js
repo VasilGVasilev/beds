@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { imageLoader } from '../utils/imgLoader'
 import Image from 'next/image'
 import { usePathname } from "next/navigation";
-import { AiFillCloseCircle } from 'react-icons/ai';
+import { AiOutlineClose } from 'react-icons/ai';
 import { motion } from "framer-motion"
 
 import { useClickAway } from 'react-use'
@@ -166,6 +166,7 @@ const Navbar = () => {
                                 {/* CLOSE ICON */}
                                 <div className="flex justify-end p-12">
                                     <button onClick={() => setIsMenuToggled(!isMenuToggled)}>
+                                        <AiOutlineClose size={24} className="text-white" />
                                     </button>
                                 </div>
 
