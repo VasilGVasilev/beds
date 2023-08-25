@@ -6,9 +6,7 @@ import { imageLoader } from "../../utils/imgLoader";
 import { lato } from "@/utils/fonts";
 import { motion } from "framer-motion";
 import { FBVideo } from "@/components/FBVideo";
-// export const metadata = {
-//   title: 'Инвеститор - Ixora Residence',
-// };
+
 
 export const revalidate = 0; // revalidate this page every 60 seconds
 
@@ -25,7 +23,7 @@ export default function Video() {
 
 
     return (
-        <div className="bg-ixora-deep-blue flex flex-col">
+        <div className="bg-beds-deep-blue flex flex-col">
 
                 <div className="bg-gray-800 m-10 rounded-sm flex justify-center items-center">
                     <motion.h2

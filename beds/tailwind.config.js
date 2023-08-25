@@ -11,8 +11,8 @@ module.exports = {
           "contacts-bg": "url('/contact-bg.webp')",
       }),
       colors: {
-        'ixora-deep-blue': '#111827',
-        'ixora-dark': '#292927'
+        'beds-deep-blue': '#111827',
+        'beds-dark': '#292927'
       },
       animation: {
         wiggle: 'wiggle 1s ease-in-out infinite',

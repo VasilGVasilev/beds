@@ -10,7 +10,7 @@ export const revalidate = 0; // revalidate this page every 60 seconds
 export default function Order() {
 
     return (
-        <div className="bg-ixora-deep-blue flex flex-col">
+        <div className="bg-beds-deep-blue flex flex-col">
             <motion.div
                 initial="hidden"
                 whileInView="visible"

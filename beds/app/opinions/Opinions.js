@@ -46,7 +46,7 @@ export default function Opinions() {
 
 
     return (
-        <div className="bg-ixora-deep-blue flex flex-col">
+        <div className="bg-beds-deep-blue flex flex-col">
 
 
             <div className="bg-gray-800 m-10 rounded-sm">

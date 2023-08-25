@@ -89,7 +89,7 @@ const Navbar = () => {
     return (
         <>
             {/* HIDDEN div to fix navbar being fixed */}
-            <div className={`bg-ixora-deep-blue z-40 w-full top-0 py-[2%] sm:py-[1%]`} >
+            <div className={`bg-beds-deep-blue z-40 w-full top-0 py-[2%] sm:py-[1%]`} >
                 <div className="flex items-center justify-between mx-auto w-5/6">
 
                     <div className='saturate-200 duration-200 flex justify-center items-center h-[30%] w-[30%] sm:h-[15%] sm:w-[15%]' >
@@ -114,7 +114,7 @@ const Navbar = () => {
                             className="rounded-xl h-10 md:h-16"
                             // loader={imageLoader}
                             src="/dm-logo.webp"
-                            alt="Ixora Logo"
+                            alt="DM Logo"
 
                         />
                     </Link>
@@ -159,7 +159,7 @@ const Navbar = () => {
                             ref={modalRef}
                         >
                             <motion.div
-                                className="fixed z-50 right-0 bottom-0 h-full bg-ixora-deep-blue w-[300px]"
+                                className="fixed z-50 right-0 bottom-0 h-full bg-beds-deep-blue w-[300px]"
                                 initial="hidden"
                                 whileInView="visible"
                                 viewport={{ once: true, amount: 0.1 }}
