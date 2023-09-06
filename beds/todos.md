@@ -1,2 +1,1 @@
-sitemap update
-image and image function with proper images
+sitemap imamgeuploader update with actual domain name

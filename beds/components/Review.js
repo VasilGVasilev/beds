@@ -6,14 +6,16 @@ import { PiShareFat } from 'react-icons/pi'
 import { BiWorld } from 'react-icons/bi';
 
 import { motion } from "framer-motion";
+import { imageLoader } from "@/utils/imgLoader";
+import Image from "next/image";
 
 
-export const Review = ({review}) => {
+export const Review = ({ review }) => {
     return (
         <Link href={'https://www.facebook.com/profile.php?id=100042058017286&sk=reviews'}>
 
-            <motion.li 
-                key={review.id} 
+            <motion.li
+                key={review.id}
                 className="flex flex-col md:w-128 md:mx-auto p-4 m-10 bg-[#242526] text-[#E4E6EB] rounded-md"
                 initial="hidden"
                 whileInView="visible"
@@ -25,11 +27,15 @@ export const Review = ({review}) => {
                 }}
             >
                 <div className="flex flex-row">
-                    <img
-                        src={review.user.avatar}
-                        alt={review.user.name}
+                    <Image
                         className="w-10 h-10 rounded-full mr-4"
-                    />
+                        loader={imageLoader}
+                        src={review.user.avatar}
+                        alt="Image"
+                        width={1298}
+                        height={828}
+                    ></Image>
+
                     <div className="flex flex-col">
                         <div className="flex flex-row gap-2 justify-center items-center">
                             <h3 className="text-lg font-semibold">{review.user.name}   <span className="text-[#B8BBBF]">препоръчва </span> Даниел Младенов - падащи легла.</h3>

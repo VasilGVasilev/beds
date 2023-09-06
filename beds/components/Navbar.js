@@ -5,10 +5,10 @@ import Link from 'next/link'
 import { imageLoader } from '../utils/imgLoader'
 import Image from 'next/image'
 import { usePathname } from "next/navigation";
-import { AiOutlineClose } from 'react-icons/ai';
+import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { motion } from "framer-motion"
 
-
+AiOutlineMenu
 
 // props: 
 // - name of link, must be constant
@@ -110,13 +110,14 @@ const Navbar = () => {
                 <div className="flex items-center justify-between mx-auto w-5/6">
 
                     <Link className='saturate-200 duration-200 flex justify-center items-center h-[30%] w-[30%] sm:h-[15%] sm:w-[15%]' href={'/'}>
-                        <img
+                        <Image
                             className="rounded-xl h-10 md:h-16"
-                            // loader={imageLoader}
+                            loader={imageLoader}
                             src="/dm-logo.webp"
-                            alt="DM Logo"
-
-                        />
+                            alt="Image"
+                            width={1298}
+                            height={828}
+                        ></Image>
                     </Link>
                     {/* DESKTOP NAV */}
                     {isDesktop ? (
@@ -147,7 +148,7 @@ const Navbar = () => {
                             className="rounded-full bg-red p-2"
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
                         >
-                            <img alt="menu-icon" src="/assets/menu-icon.svg" width={20} height={20} />
+                            <AiOutlineMenu size={20} />
                         </button>
                     )}
 

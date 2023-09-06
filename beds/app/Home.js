@@ -29,13 +29,16 @@ export default function Home() {
             {/* WELCOME IMAGE */}
 
             <div className="group relative ">
-
-                <img
+                <Image
                     className="mx-auto w-full h-36 bg-white opacity-20 group-hover:opacity-60 transition"
-                    // loader={imageLoader}
+
+                    loader={imageLoader}
                     src="/fb-welcome.webp"
                     alt="Image"
-                />
+                    width={2868}
+                    height={1367}
+                ></Image>
+
                 <Link href={'https://www.facebook.com/profile.php?id=100042058017286&locale=bg_BG'}>
 
                     <div className="absolute bottom-[15%] sm:bottom-1/3 left-0 w-full h-full flex items-end justify-center ">
@@ -96,7 +99,16 @@ export default function Home() {
                                 hidden: { opacity: 0, x: -50 },
                                 visible: { opacity: 1, x: 0 },
                             }}
-                        ><img src="/assets/triangle.svg" alt="triangle" className="bg-inherit" /> </motion.div>
+                        >
+                            <Image
+                                className="bg-inherit"
+                                loader={imageLoader}
+                                src="/assets/triangle.svg"
+                                alt="Image"
+                                width={100}
+                                height={100}
+                            ></Image>
+                        </motion.div>
                         <WelcomeText></WelcomeText>
                         <motion.div
                             className="py-5"
@@ -139,17 +151,14 @@ export default function Home() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-
-
-                    <img
+                    <Image
                         className="transition-transform duration-700 ease-in-out hover:scale-110"
-                        // loader={imageLoader}
+                        loader={imageLoader}
                         src="/assets/folding-bed.gif"
-
                         alt="Image"
-                    />
-
-
+                        width={700}
+                        height={700}
+                    ></Image>
                 </motion.div>
             </div>
 
