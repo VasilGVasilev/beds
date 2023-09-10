@@ -87,7 +87,7 @@ export default function Home() {
 
             <div className="lg:flex lg:justify-center lg:items-center lg:p-10 bg-gray-100">
                 {/* WELCOME TEXT */}
-                <div className="lg:basis-[30%]">
+                <div className="lg:basis-1/2">
                     <div className={` p-10`}>
                         <motion.div
                             className="py-5"
@@ -141,7 +141,7 @@ export default function Home() {
 
                 {/* WELCOME IMAGE */}
                 <motion.div
-                    className=""
+                    className="flex flex-col justify-center items-center"
                     initial="hidden"
                     whileInView="visible"
                     viewport={{ once: true, amount: 0.5 }}
@@ -151,14 +151,8 @@ export default function Home() {
                         visible: { opacity: 1, x: 0 },
                     }}
                 >
-                    <Image
-                        className="transition-transform duration-700 ease-in-out hover:scale-110"
-                        loader={imageLoader}
-                        src="/assets/folding-bed.gif"
-                        alt="Image"
-                        width={700}
-                        height={700}
-                    ></Image>
+                    <iframe src="https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2F100042058017286%2Fvideos%2F806059054460771%2F&show_text=false&width=267&t=0" width="267" height="476" scrolling="no" frameBorder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowFullScreen={true}></iframe>
+
                 </motion.div>
             </div>
 

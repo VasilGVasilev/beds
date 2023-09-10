@@ -8,7 +8,6 @@ import { usePathname } from "next/navigation";
 import { AiOutlineClose, AiOutlineMenu } from 'react-icons/ai';
 import { motion } from "framer-motion"
 
-AiOutlineMenu
 
 // props: 
 // - name of link, must be constant
@@ -148,7 +147,7 @@ const Navbar = () => {
                             className="rounded-full bg-red p-2"
                             onClick={() => setIsMenuToggled(!isMenuToggled)}
                         >
-                            <AiOutlineMenu size={20} />
+                            <AiOutlineMenu size={24} className="text-white"/>
                         </button>
                     )}
 
