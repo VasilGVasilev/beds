@@ -39,35 +39,8 @@ export default function Contacts() {
                             visible: { opacity: 1, x: 0 },
                         }}
                     >ЗА ЗАПИТВАНИЯ И ВЪПРОСИ </motion.div>
+                    <a href={`tel:00359888368256`} className="text-green-600 text-4xl">0888368256</a>
 
-                    <div className="flex flex-col justify-center items-center">
-
-                        <div className=" text-white flex flex-col gap-5">
-                            <div>
-                                <p className="underline pb-3">
-                                    Адрес:
-                                </p>
-                                <p>
-                                    София, Овча Купел 1
-                                </p>
-                                <p>
-                                    бл.423, ап.1
-                                </p>
-                            </div>
-                            <div>
-                                <p className="underline pb-3">
-                                    Телефон:
-                                </p>
-                                <p>
-                                    <a href={`tel:00359888368256`} className="text-green-600 text-4xl">0888368256</a>
-                                </p>
-                            </div>
-
-                        </div>
-
-
-
-                    </div>
                 </div>
 
             </div>
